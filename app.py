@@ -1,13 +1,13 @@
 #import pandas as pd
 #import numpy as np
 #import matplotlib.pyplot as plt
-#from datetime import datetime
+from datetime import datetime
 ﻿import streamlit as st
 from utils import *
 
-#Caracteristicas basicas de la pagina
+Caracteristicas basicas de la pagina
 st.set_page_config(page_icon="🤖", page_title="Proyecto_Deteccion", layout="wide")
-#hora_actual = datetime.now().strftime("%H:%M:%S")
+hora_actual = datetime.now().strftime("%H:%M:%S")
 #st.subheader(f"Hora actual: {hora_actual}")
 #st.title("Deteccion de anomalias en Series de Tiempo en Cardiografia")
 
