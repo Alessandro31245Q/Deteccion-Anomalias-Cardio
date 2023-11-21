@@ -40,21 +40,21 @@ with c30:
         datos_series_temporales = leer_dato(uploaded_file)
 
             # Mostrar la grafica estilo cardiograma
-        #st.subheader("Cardiograma")
+        st.subheader("Cardiograma")
 
             # Supongamos que tus datos tienen un formato de tiempo y valor
-        #tiempo = np.arange(len(datos_series_temporales))
-        #valores = datos_series_temporales
+        tiempo = np.arange(len(datos_series_temporales))
+        valores = datos_series_temporales
 
             # Crear un gráfico estilo cardiograma
-       # fig, ax = plt.subplots(figsize=(10, 6))
-        #ax.plot(tiempo, valores, color='blue', linewidth=2, label='Cardiograma')
-        #ax.set_xlabel('Tiempo', fontsize=14)
-        #ax.set_ylabel('Valor', fontsize=14)
-        #ax.set_title('Representacion del Cardiograma', fontsize=16)
-        #ax.legend()
-        #ax.grid(True, linestyle='--', alpha=0.7)
-        #st.pyplot(fig)
+        fig, ax = plt.subplots(figsize=(10, 6))
+        ax.plot(tiempo, valores, color='blue', linewidth=2, label='Cardiograma')
+        ax.set_xlabel('Tiempo', fontsize=14)
+        ax.set_ylabel('Valor', fontsize=14)
+        ax.set_title('Representacion del Cardiograma', fontsize=16)
+        ax.legend()
+        ax.grid(True, linestyle='--', alpha=0.7)
+        st.pyplot(fig)
 
             
         info_box_result = st.info(f"""
