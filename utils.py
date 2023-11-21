@@ -36,9 +36,6 @@ def cargar_modelo_preentrenado(model_path):
     return modelo
 
 def predecir(modelo, datos, umbral):
-    # Modificaciones:
-    # - En lugar de from_numpy -> torch.numpy
-    # - En lugar de mean(dim=1) -> mean (pues tendremos sólo 1 dato)
     fn_perdida = torch.nn.L1Loss(reduction='none')
     reconstrucciones = modelo(torch.from_numpy(datos).float())
     perdida = fn_perdida(reconstrucciones, torch.from_numpy(datos).float()).mean()
@@ -46,8 +43,6 @@ def predecir(modelo, datos, umbral):
     return torch.lt(perdida, umbral)
 
 def obtener_categoria(comparaciones):
-    # Modificaciones:
-    # No se requiere el uso de "for" pues tendremos sólo 1 dato
     if comparaciones.item():
         categoria = 'Normal'
     else:
