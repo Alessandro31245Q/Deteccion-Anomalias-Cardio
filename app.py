@@ -1,12 +1,16 @@
-#import pandas as pd
-#import numpy as np
-#import matplotlib.pyplot as plt
-from datetime import datetime
 ﻿import streamlit as st
+import pandas as pd
+import numpy as np
+import matplotlib.pyplot as plt
+from datetime import datetime
 from utils import *
 
 
-
+#Caracteristicas basicas de la pagina
+st.set_page_config(page_icon="🤖", page_title="Proyecto_Deteccion", layout="wide")
+hora_actual = datetime.now().strftime("%H:%M:%S")
+#st.subheader(f"Hora actual: {hora_actual}")
+#st.title("Deteccion de anomalias en Series de Tiempo en Cardiografia")
 c29, c30, c31 = st.columns([1, 6, 1]) # 3 columnas: 10%, 60%, 10%
 
 UMBRAL = 0.089
