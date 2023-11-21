@@ -5,7 +5,7 @@ import matplotlib.pyplot as plt
 from datetime import datetime
 from utils import *
 
- Caracteristicas basicas de la pagina
+#Caracteristicas basicas de la pagina
 st.set_page_config(page_icon="🤖", page_title="Proyecto_Deteccion", layout="wide")
 hora_actual = datetime.now().strftime("%H:%M:%S")
 st.subheader(f"Hora actual: {hora_actual}")
