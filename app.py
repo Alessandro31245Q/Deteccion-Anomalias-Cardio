@@ -6,10 +6,10 @@ from datetime import datetime
 from utils import *
 
 # Características básicas de la página
-st.set_page_config(page_icon="🤖", page_title="Proyecto_Deteccion", layout="wide")
+#st.set_page_config(page_icon="🤖", page_title="Proyecto_Deteccion", layout="wide")
 hora_actual = datetime.now().strftime("%H:%M:%S")
 st.subheader(f"Hora actual: {hora_actual}")
-st.title("Detección de anomalías en Series de Tiempo en Cardiografia")
+#st.title("Detección de anomalías en Series de Tiempo en Cardiografia")
 
 c29, c30, c31 = st.columns([1, 6, 1]) # 3 columnas: 10%, 60%, 10%
 
@@ -64,7 +64,7 @@ with c30:
     else:
         st.info(
             f"""
-                👆 Debe cargar primero un dato con extensión .pkl
+                👆 Debe cargar primero un dato con extension .pkl
                 """
         )
 
