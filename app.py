@@ -33,7 +33,7 @@ with c30:
         # Acá viene la predicción con el modelo
         dato = leer_dato(uploaded_file)
         autoencoder = Autoencoder()
-        autoencoder = cargar_modelo_preentrenado('autoencoder.pth')
+        autoencoder = cargar_modelo_preentrenado('autoencoder (3).pth')
         prediccion = predecir(autoencoder, dato, UMBRAL)
         categoria = obtener_categoria(prediccion)
 
